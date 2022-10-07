@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="3dp"
+    app:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/profileLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userProfileView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_person"
+                app:shapeAppearance="@style/circle"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/ratinggbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:numStars="5"
+            android:layout_below="@+id/profileLL"
+            android:layout_marginEnd="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datee"
+            android:text="27/09/2022"
+            android:layout_toEndOf="@+id/ratinggbar"
+            android:layout_below="@id/profileLL"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/originalreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datee"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="The original review of the users"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

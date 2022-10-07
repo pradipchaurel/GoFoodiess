@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="2dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        order id-->
+        <TextView
+            android:id="@+id/orderIdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order:1222"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+<!--        order date-->
+        <TextView
+            android:id="@+id/orderDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/nextT"
+            android:text="dd/MM/yyyy"/>
+<!--        email id-->
+        <TextView
+            android:id="@+id/emailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderIdt"
+            android:text="Email"
+            android:textColor="@color/grey"/>
+<!--        amount total-->
+        <TextView
+            android:id="@+id/amountTTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailId"
+            android:text="Total Amount: Rs 35"
+            android:textColor="@color/grey"/>
+<!--        order status-->
+        <TextView
+            android:id="@+id/orderstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailId"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/nextT"
+            android:text="In Progress"
+            android:textColor="@color/green" />
+<!--        next button-->
+        <ImageView
+            android:id="@+id/nextT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

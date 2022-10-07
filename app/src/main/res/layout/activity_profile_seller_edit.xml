@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileSellerEdit">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/toolbarRL"
+        android:background="@drawable/shape_rect01">
+
+        <ImageButton
+            android:id="@+id/sellerEditbackBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/sellerEditTV"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sellereditProfilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/toolbarRL"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile"
+        app:shapeAppearance="@style/circle" />
+
+    <EditText
+        android:id="@+id/editsellerfullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sellereditProfilePic"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_rect02"
+        android:drawableStart="@drawable/ic_person"
+        android:hint="  Full Name"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <EditText
+        android:id="@+id/editsellerregphonecall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editsellerfullname"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_rect02"
+        android:drawableStart="@drawable/phonecall"
+        android:hint=" Phone"
+        android:inputType="phone"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/sellerEditShopName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editsellerregphonecall"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_rect02"
+        android:drawableStart="@drawable/ic_store"
+        android:hint=" Shop Name"
+        android:inputType="textMultiLine|textPersonName"
+        android:padding="10dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shop Open"
+        android:layout_below="@id/sellerEditShopName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/shopStatus"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/sellerrUpdate"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/shopStatus"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:text="Update"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

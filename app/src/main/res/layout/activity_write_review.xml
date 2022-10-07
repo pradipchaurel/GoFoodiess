@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.WriteReviewActivity">
+    <RelativeLayout
+        android:id="@+id/toolls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect01">
+
+        <ImageButton
+            android:id="@+id/backB"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Write Review"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolls"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_store"
+        app:shapeAppearance="@style/circle"
+        app:strokeColor="@color/purple_500"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/shoppname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profileview"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:text="Shop Name"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/shoppname"
+        android:id="@+id/reviewTV"
+        android:layout_height="wrap_content"
+        android:text="How was product? \nYour feedback is important to improve our quality"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black" />
+
+    <RatingBar
+        android:id="@+id/ratingsBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:numStars="5" />
+    <EditText
+        android:id="@+id/reviewEt"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ratingsBar"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:hint="Write Review..."
+        android:background="@drawable/shape_rect02"
+        android:padding="10dp"
+        android:gravity="top"
+        android:layout_margin="20dp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_done"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="5dp"/>
+</RelativeLayout>

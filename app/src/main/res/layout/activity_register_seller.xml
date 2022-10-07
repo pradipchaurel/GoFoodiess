@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterSeller">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/shape_rect01">
+
+                <ImageButton
+                    android:id="@+id/selregbackBtn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+                <ImageButton
+                    android:id="@+id/selgpsLocation"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@null"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_gps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Register Seller"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iconIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/shape_circle01"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_vpn_key_24" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/selprofilePic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/iconIv"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/profile"
+                app:shapeAppearance="@style/circle" />
+
+
+            <EditText
+                android:id="@+id/selfullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilePic"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="  Full Name"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/selShop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fullname"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_store"
+                android:hint="  Shop Name"
+                android:inputType="textPersonName|textAutoComplete"
+                android:padding="10dp" />
+
+
+
+            <EditText
+                android:id="@+id/selPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regConfirmpassword"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_phone"
+                android:hint=" Phone"
+                android:inputType="phone"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/selshipfee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regConfirmpassword"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_shipping"
+                android:hint=" Shipping Fee"
+                android:inputType="number"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regphonecall"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/selcountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/country"
+                    android:hint="  Country"
+                    android:inputType="textPostalAddress"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/selstate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/location"
+                    android:hint=" State"
+                    android:inputType="textPostalAddress"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/selcity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/location"
+                    android:hint=" City"
+                    android:inputType="textPostalAddress"
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/selfullAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/location"
+                android:hint=" Complete Address"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:padding="10dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:background="@drawable/shape_rect02"
+                android:padding="10dp"
+                android:id="@+id/selemail"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="10dp"/>
+            <EditText
+                android:id="@+id/selpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regEmail"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/padlock"
+                android:hint=" Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/selConfirmpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regpassword"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/padlock"
+                android:hint=" Confirm Password"
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+
+            <Button
+                android:id="@+id/selregisterButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fullAddress"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:padding="15dp"
+                android:text="Register"
+                tools:ignore="TouchTargetSizeCheck" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

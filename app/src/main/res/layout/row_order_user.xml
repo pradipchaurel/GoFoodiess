@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    android:layout_marginBottom="2dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/orderTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order:12345"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25/09/2022"
+            android:layout_toStartOf="@+id/nextI"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/shopTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderTv"
+            android:text="ABC Shop" />
+
+        <TextView
+            android:id="@+id/amountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopTv"
+            android:text="Total Amount:Rs.878"/>
+        <ImageView
+            android:id="@+id/nextI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopTv"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/nextI"
+            android:text="In Progress"
+            android:textColor="@color/green"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
